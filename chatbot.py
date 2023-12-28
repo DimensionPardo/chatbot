@@ -14,7 +14,7 @@ lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('chatbot_model.h5')
+model = load_model('chatbot_model.keras')
 
 #Pasamos las palabras de oración a su forma raíz
 def clean_up_sentence(sentence):
@@ -56,5 +56,4 @@ while True:
     message=input("")
     ints = predict_class(message)
     res = get_response(ints, intents)
-    print(res)
-    
+    print(res)
