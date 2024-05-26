@@ -56,3 +56,6 @@ def respuesta(message):
     res = get_response(ints, intents)
     return res
 
+while True:
+    message = input()
+    print(respuesta(message))
