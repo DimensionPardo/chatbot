@@ -51,10 +51,8 @@ def get_response(tag, intents_json):
             break
     return result
 
-#Ejecutamos el chat en bucle
-while True:
-    message=input("")
+def respuesta(message):
     ints = predict_class(message)
     res = get_response(ints, intents)
-    print(res)
-    
+    return res
+
